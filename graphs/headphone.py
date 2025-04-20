@@ -6,13 +6,16 @@ import pymysql
 from datetime import timedelta
 
 # Connect to MySQL database
+# Connect to Cloud (Railway) MySQL database
 try:
     connection = pymysql.connect(
-        host="localhost",
+        host="nozomi.proxy.rlwy.net",
         user="root",
-        password="root",
-        database="scraper_db"
+        password="hkXIIviYSdzhcwvbDyLtyDBDkdnvhLGE",
+        port=10649,
+        database="railway"
     )
+
 except Exception as e:
     st.error(f"Database connection error: {e}")
     st.stop()

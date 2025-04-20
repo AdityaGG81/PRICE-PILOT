@@ -5,10 +5,11 @@ import datetime
 
 # ✅ Connect to MySQL Database
 db = pymysql.connect(
-    host="mysql.railway.internal",
-    user="root",
-    password="wtFMTvDDbZsRINtstBnbjvJyeARTNTdH",
-    database="railway"
+   host="nozomi.proxy.rlwy.net",
+        user="root",
+        password="hkXIIviYSdzhcwvbDyLtyDBDkdnvhLGE",
+        port=10649,
+        database="railway"
 )
 cursor = db.cursor()
 

@@ -7,13 +7,14 @@ from datetime import timedelta
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
-# Connect to MySQL
+# Connect to Cloud (Railway) MySQL database
 try:
     connection = pymysql.connect(
-        host="localhost",
+        host="nozomi.proxy.rlwy.net",
         user="root",
-        password="root",
-        database="scraper_db"
+        password="hkXIIviYSdzhcwvbDyLtyDBDkdnvhLGE",
+        port=10649,
+        database="railway"
     )
 except Exception as e:
     st.error(f"Database connection error: {e}")

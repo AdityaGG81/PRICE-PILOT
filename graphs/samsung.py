@@ -7,6 +7,21 @@ from datetime import timedelta
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
+# Connect to Cloud (Railway) MySQL database
+try:
+    connection = pymysql.connect(
+        host="nozomi.proxy.rlwy.net",
+        user="root",
+        password="hkXIIviYSdzhcwvbDyLtyDBDkdnvhLGE",
+        port=10649,
+        database="railway"
+    )
+
+except Exception as e:
+    st.error(f"Database connection error: {e}")
+    st.stop() 
+
+    
 # Page configuration
 st.set_page_config(layout="wide", page_title="Samsung S23 Ultra Price Tracker")
 

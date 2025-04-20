@@ -6,10 +6,11 @@ import datetime
 
 # ✅ Connect to MySQL Database
 db = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="scraper_db"
+     host="nozomi.proxy.rlwy.net",
+        user="root",
+        password="hkXIIviYSdzhcwvbDyLtyDBDkdnvhLGE",
+        port=10649,
+        database="railway"
 )
 cursor = db.cursor()
 
