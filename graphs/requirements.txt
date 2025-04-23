@@ -6,5 +6,5 @@ pymysql
 cryptography
 LinearRegression
 numpy
-
+scikit-learn
 
