@@ -57,17 +57,7 @@ with filter_col3:
         index=0
     )
 
-# MySQL DB Connection
-try:
-    connection = pymysql.connect(
-        host="localhost",
-        user="root",
-        password="root",
-        database="scraper_db"
-    )
-except Exception as e:
-    st.error(f"Database connection failed: {e}")
-    st.stop()
+
 
 # Load data
 try:
