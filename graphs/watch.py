@@ -62,7 +62,7 @@ with filter_col3:
 
 # Read data from MySQL
 try:
-    query = "SELECT * FROM view_samsung_watch"
+    query = "SELECT * FROM view_samsung_watch_6"
     df = pd.read_sql(query, connection)
     
     # Close database connection after fetching data
