@@ -1,0 +1,454 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* Navigation Bar - Updated Styles */
+.navbar {
+background-color: white;
+color: #1e3a8a;
+padding: 1rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: bold;
+color: #1e3a8a;
+text-decoration: none;
+transition: transform 0.3s ease;
+}
+
+.logo:hover {
+transform: scale(1.05);
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+}
+
+.nav-links li {
+margin-left: 2rem;
+position: relative;
+}
+
+.nav-links a {
+color: #1e3a8a;
+text-decoration: none;
+font-size: 1rem;
+font-weight: 500;
+padding: 0.5rem 0;
+transition: color 0.3s ease;
+display: inline-block;
+}
+
+/* Create underline effect on hover */
+.nav-links a::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #3b82f6;
+transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+color: #3b82f6;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+/* Active link styling - add a class="active" to the current page link in your HTML */
+.nav-links a.active {
+color: #3b82f6;
+}
+
+.nav-links a.active::after {
+width: 100%;
+background-color: #3b82f6;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+.nav-links li {
+margin-left: 1rem;
+}
+
+.nav-links a {
+font-size: 0.9rem;
+}
+}
+/* Hero Section */
+.hero {
+background-color: #1e3a8a;
+color: white;
+padding: 5rem 0 8rem;
+position: relative;
+overflow: hidden;
+}
+
+.text-content {
+text-align: center;
+margin-bottom: 3rem;
+padding: 0 5%;
+position: relative;
+z-index: 2;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 1rem;
+}
+
+.hero p {
+font-size: 1.2rem;
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* Video Container (Center) */
+.video-container {
+width: 70%;
+max-width: 900px;
+margin: 0 auto;
+position: relative;
+z-index: 1;
+}
+
+video {
+width: 100%;
+height: auto;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Semicircular Rings */
+.semicircle-ring {
+position: absolute;
+width: 350px;
+height: 700px;
+top: 50%;
+transform: translateY(-50%);
+z-index: 0;
+transition: all 0.4s ease;
+}
+
+.semicircle-ring.left {
+left: -175px; /* Position half outside the viewport */
+background: transparent;
+border-right: 50px solid #f3d250; /* Yellow ring - broader */
+border-radius: 0 350px 350px 0;
+}
+
+.semicircle-ring.right {
+right: -175px; /* Position half outside the viewport */
+background: transparent;
+border-left: 50px solid #2980b9; /* Blue ring - broader */
+border-radius: 350px 0 0 350px;
+}
+
+.ring-link {
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+
+/* Enhanced hover effects */
+.semicircle-ring.left:hover {
+left: -150px;
+border-right-width: 60px;
+filter: brightness(1.15) drop-shadow(0 0 10px rgba(243, 210, 80, 0.5));
+}
+
+.semicircle-ring.right:hover {
+right: -150px;
+border-left-width: 60px;
+filter: brightness(1.15) drop-shadow(0 0 10px rgba(41, 128, 185, 0.5));
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+.semicircle-ring {
+width: 300px;
+height: 600px;
+}
+
+.semicircle-ring.left {
+left: -150px;
+border-right-width: 40px;
+border-radius: 0 300px 300px 0;
+}
+
+.semicircle-ring.right {
+right: -150px;
+border-left-width: 40px;
+border-radius: 300px 0 0 300px;
+}
+
+.semicircle-ring.left:hover {
+left: -130px;
+border-right-width: 50px;
+}
+
+.semicircle-ring.right:hover {
+right: -130px;
+border-left-width: 50px;
+}
+}
+
+@media (max-width: 768px) {
+.semicircle-ring {
+width: 200px;
+height: 400px;
+}
+
+.semicircle-ring.left {
+left: -100px;
+border-right-width: 30px;
+border-radius: 0 200px 200px 0;
+}
+
+.semicircle-ring.right {
+right: -100px;
+border-left-width: 30px;
+border-radius: 200px 0 0 200px;
+}
+
+.semicircle-ring.left:hover {
+left: -85px;
+border-right-width: 40px;
+}
+
+.semicircle-ring.right:hover {
+right: -85px;
+border-left-width: 40px;
+}
+}
+
+/* Categories Section */
+.categories {
+  padding: 4rem 5%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1e3a8a;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: #3b82f6;
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category {
+  margin-bottom: 4rem;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  padding: 1rem;
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.product-details {
+  padding: 1.5rem;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.product-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.flipkart-btn {
+  background-color: #fcd34d;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+}
+
+.amazon-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+}
+
+.compare-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.flipkart-btn:hover {
+  background-color: #fbbf24;
+}
+
+.amazon-btn:hover {
+  background-color: #2563eb;
+}
+
+.compare-btn:hover {
+  background-color: #d1d5db;
+}
+
+.product-input-section {
+  text-align: center;
+  padding: 2rem;
+}
+#productInput {
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #3f51b5;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #F3F4F6;
+  padding: 60px 0;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
+}
+
+.footer-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1E3A8A;
+  display: inline-block;
+}
+
+.footer-content p {
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 40px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .hero h1 {
+      font-size: 2.2rem;
+  }
+  
+  .hero p {
+      font-size: 1rem;
+  }
+}
+
+#resultText {
+margin-top: 15px;
+}

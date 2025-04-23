@@ -39,7 +39,7 @@
             e.preventDefault(); // Prevent page refresh
             const userInput = document.getElementById("productInput").value.trim();
             if (userInput) {
-                document.getElementById("resultText").innerText = `You searched for: "${userInput}"`;
+                document.getElementById("resultText").innerText = `Thank You. We will consider your suggestion.`;
                 // You can send this input to backend or use it for filtering
                 // Example: redirect to search results page
                 // window.location.href = `/search.html?query=${encodeURIComponent(userInput)}`;
