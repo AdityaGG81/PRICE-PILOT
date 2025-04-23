@@ -14,7 +14,6 @@ class PricePrediction:
     def __init__(self, db_config=None):
         """
         Initialize the PricePrediction class.
-        
         Parameters:
         -----------
         db_config : dict, optional
@@ -438,6 +437,7 @@ class PricePrediction:
 def main():
     """Main function to run from command line."""
     parser = argparse.ArgumentParser(description='Price Prediction Tool')
+    
     parser.add_argument('product', help='Product name (e.g., iphone15, galaxys24)')
     parser.add_argument('--days', type=int, default=30, help='Number of days to predict (default: 30)')
     parser.add_argument('--model', choices=['arima', 'linear', 'both'], default='both',
